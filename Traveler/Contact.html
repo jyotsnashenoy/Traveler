@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    .contact-container {
+      padding: 20px;
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .contact-container h2 {
+      font-size: 2em;
+      margin-top: 0;
+    }
+    .contact-container form {
+      display: flex;
+      flex-direction: column;
+    }
+    .contact-container label {
+      font-size: 1em;
+      margin-bottom: 5px;
+    }
+    .contact-container input,
+    .contact-container textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .contact-container button {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+    }
+    .contact-container button:hover {
+      background-color: #555;
+    }
+  </style>
+  <body>
+    <nav class="navbar">
+      <div class="nav-brand"><img src="./Images/logo.png" alt="logo" /></div>
+      <div class="nav-link">
+        <div><a href="index.html">Home</a></div>
+        <div><a href="destinations.html">Destinations</a></div>
+        <div><a href="about.html">About</a></div>
+        <div><a href="contact.html">Contact</a></div>
+      </div>
+    </nav>
+    <div class="contact-container">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <footer>
+      <p>© 2024 ShopMate. All rights reserved.</p>
+    </footer>
+
+    <script>
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          alert("Your message has been sent successfully!");
+        });
+    </script>
+  </body>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-about">
+        <h4>Contact</h4>
+        <p>
+          We are committed to making your travel experiences memorable and
+          convenient.
+        </p>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Email: info@traveler.com</p>
+        <p>Phone: +123 456 7890</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Traveler Company. All Rights Reserved.</p>
+    </div>
+  </footer>
+</html>
