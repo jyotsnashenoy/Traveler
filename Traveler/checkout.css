@@ -33,7 +33,7 @@ form {
 }
 
 form label {
-  font-size: 16px;
+  font-size: 15px;
   margin-bottom: 8px;
 }
 
@@ -42,22 +42,23 @@ form select {
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-bottom: 20px;
-  font-size: 16px;
+  font-size: 14px;
   background-color: #fff;
 }
 
 form input[type="text"],
 form input[type="number"],
+form input[type="email"],
 form input[type="date"] {
-  padding: 10px;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-bottom: 20px;
-  font-size: 16px;
+  margin-bottom: 16px;
+  font-size: 14px;
 }
 
 form button {
-  padding: 15px;
+  padding: 12px;
   background-color: #3498db;
   color: white;
   border: none;
