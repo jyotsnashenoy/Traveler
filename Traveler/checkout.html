@@ -32,6 +32,9 @@
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required />
 
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+
             <label for="country">Country</label>
             <select id="country" name="country" required>
               <option value="India">India</option>
@@ -65,40 +68,40 @@
           <div class="country-prices">
             <div class="country-price">
               <h3>India</h3>
-              <p><strong>Adult:</strong> ₹80 per night</p>
-              <p><strong>Child:</strong> ₹60 per night</p>
+              <p><strong>Adult:</strong> $80 per night</p>
+              <p><strong>Child:</strong> $60 per night</p>
             </div>
             <div class="country-price">
               <h3>South Africa</h3>
-              <p><strong>Adult:</strong> ₹105 per night</p>
-              <p><strong>Child:</strong> ₹90 per night</p>
+              <p><strong>Adult:</strong> $105 per night</p>
+              <p><strong>Child:</strong> $90 per night</p>
             </div>
             <div class="country-price">
               <h3>USA</h3>
-              <p><strong>Adult:</strong> ₹120 per night</p>
-              <p><strong>Child:</strong> ₹100 per night</p>
+              <p><strong>Adult:</strong> $120 per night</p>
+              <p><strong>Child:</strong> $100 per night</p>
             </div>
             <div class="country-price">
               <h3>South Korea</h3>
-              <p><strong>Adult:</strong> ₹110 per night</p>
-              <p><strong>Child:</strong> ₹95 per night</p>
+              <p><strong>Adult:</strong> $110 per night</p>
+              <p><strong>Child:</strong> $95 per night</p>
             </div>
             <div class="country-price">
               <h3>Mexico</h3>
-              <p><strong>Adult:</strong> ₹105 per night</p>
-              <p><strong>Child:</strong> ₹95 per night</p>
+              <p><strong>Adult:</strong> $105 per night</p>
+              <p><strong>Child:</strong> $95 per night</p>
             </div>
             <div class="country-price">
               <h3>Poland</h3>
-              <p><strong>Adult:</strong> ₹95 per night</p>
-              <p><strong>Child:</strong> ₹80 per night</p>
+              <p><strong>Adult:</strong> $95 per night</p>
+              <p><strong>Child:</strong> $80 per night</p>
             </div>
           </div>
         </div>
 
         <div class="payment-wrapper" id="payment-info" style="display: none">
           <div class="payment">
-            <p><strong>Total Amount:</strong> <span id="amount">₹0</span></p>
+            <p><strong>Total Amount:</strong> <span id="amount">$0</span></p>
             <button id="pay-button">Pay</button>
           </div>
         </div>
@@ -159,7 +162,7 @@
 
           document.getElementById(
             "amount"
-          ).textContent = `₹${totalAmount.toFixed(2)}`;
+          ).textContent = `$${totalAmount.toFixed(2)}`;
           document.getElementById("payment-info").style.display = "block";
         });
 
@@ -168,25 +171,32 @@
         const nights = Math.round((checkoutDate - checkinDate) / oneDay);
         return nights;
       }
+
+      document
+        .getElementById("pay-button")
+        .addEventListener("click", function () {
+          window.location.href = "payment.html";
+        });
     </script>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-about">
+          <h4>About Us</h4>
+          <p>
+            We are committed to making your travel experiences memorable and
+            convenient.
+          </p>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>Email: info@traveler.com</p>
+          <p>Phone: +123 456 7890</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Traveler Company. All Rights Reserved.</p>
+      </div>
+    </footer>
   </body>
-  <footer>
-    <div class="footer-container">
-      <div class="footer-about">
-        <h4>About Us</h4>
-        <p>
-          We are committed to making your travel experiences memorable and
-          convenient.
-        </p>
-      </div>
-      <div class="footer-contact">
-        <h4>Contact Us</h4>
-        <p>Email: info@traveler.com</p>
-        <p>Phone: +123 456 7890</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 Traveler Company. All Rights Reserved.</p>
-    </div>
-  </footer>
 </html>
